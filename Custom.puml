@@ -1,7 +1,5 @@
-!define IMPORT https://raw.githubusercontent.com/FrancescoSprotetto/component-plantum-library/main/
+!define IMPORT https://raw.githubusercontent.com/FrancescoSprotetto/component-plantum-library/main
 !includeurl IMPORT/Import.puml
-
-
 
 ' Colors
 ' ##################################
