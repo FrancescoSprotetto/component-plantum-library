@@ -1,6 +1,24 @@
 ' Plantum library import
 
 '######################################################
+'C4 Model
+'######################################################
+
+'ref https://github.com/RicardoNiepel/C4-PlantUML
+!include <c4/C4_Context.puml>
+!include <c4/C4_Container.puml>
+!include <c4/C4_Component.puml>
+
+'ref https://github.com/Roemer/plantuml-office
+!include <office/Users/user.puml>
+!include <office/Users/mobile_user.puml>
+!include <office/Devices/device_tv.puml>
+!include <office/Concepts/globe_internet.puml>
+!include <office/Servers/network.puml>
+!include <office/Clouds/cloud.puml>
+
+
+'######################################################
 'ICON LIBRARY - Libreria contenete set di icone
 '######################################################
 'ref: https://github.com/tupadr3/plantuml-icon-font-sprites
