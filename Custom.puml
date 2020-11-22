@@ -26,7 +26,7 @@ skinparam rectangle<<oracle_module>> {
     BorderColor #710000
 }
 
-!define OracleModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n ---e_ci---\n\n <$oracle_original>" <<oracle_module>> as e_alias
+!define OracleModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$oracle_original>" <<oracle_module>> as e_alias
 
 
 ' ###################################
@@ -40,7 +40,7 @@ skinparam database<<oracle_db>> {
     BorderColor ELEMENT_FONT_COLOR
 }
 
-!define OracleDb(e_alias, e_label, e_ci) database "==<<e_label>>\n\n //<size:TECHN_FONT_SIZE>[e_techn]</size>// e_ci\n\n <$oracle_original>" <<oracle_db>> as e_alias
+!define OracleDb(e_alias, e_label, e_ci) database "==<<e_label>>\n\n e_ci\n\n <$oracle_original>" <<oracle_db>> as e_alias
 
 
 ' ###################################
@@ -54,4 +54,4 @@ skinparam rectangle<<vuejs_module>> {
     BorderColor VUEJS_BK_COLOR
 }
 
-!define VueJSModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n ---e_ci---\n\n <$vuejs_wordmark>" <<vuejs_module>> as e_alias
+!define VueJSModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$vuejs_wordmark>" <<vuejs_module>> as e_alias
