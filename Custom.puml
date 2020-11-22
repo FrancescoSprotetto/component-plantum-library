@@ -39,5 +39,4 @@ skinparam database<<oracle_db>> {
     BorderColor ELEMENT_FONT_COLOR
 }
 
-!define OracleDb(e_alias, e_label, e_ci) database "==e_label\n\n e_ci\n\n <$oracle_original>" <<oracle_db>> as e_alias
-
+!define OracleDb(e_alias, e_label, e_ci) database "==e_label\n\n //<size:TECHN_FONT_SIZE>[e_techn]</size>// e_ci\n\n <$oracle_original>" <<oracle_db>> as e_alias
