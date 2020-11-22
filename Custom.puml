@@ -14,9 +14,6 @@
 
 skinparam defaultTextAlignment center
 
-skinparam wrapWidth 200
-skinparam maxMessageSize 150
-
 ' ###################################
 ' ORACLE
 ' ###################################
@@ -39,7 +36,7 @@ skinparam database<<oracle_db>> {
     StereotypeFontColor ELEMENT_FONT_COLOR
     FontColor ELEMENT_FONT_COLOR
     BackgroundColor #710000
-    BorderColor #710000
+    BorderColor ELEMENT_FONT_COLOR
 }
 
 !define OracleDb(e_alias, e_label, e_ci) database "==e_label\n\n e_ci\n\n <$oracle_original>" <<oracle_db>> as e_alias
