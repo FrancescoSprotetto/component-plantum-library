@@ -1,9 +1,5 @@
-!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v2.2.0
-!includeurl ICONURL/common.puml
-!includeurl ICONURL/devicons/mysql.puml
-!includeurl ICONURL/devicons2/oracle_original.puml
-!includeurl ICONURL/font-awesome/server.puml
-!includeurl ICONURL/font-awesome-5/database.puml
+!define IMPORT https://raw.githubusercontent.com/FrancescoSprotetto/component-plantum-library/main/
+!includeurl IMPORT/Import.puml
 
 
 
@@ -34,5 +30,5 @@ skinparam rectangle<<oracle_module>> {
     BorderColor #710000
 }
 
-!define OracleModule(e_alias, e_label, e_ci) rectangle "==e_label\n\n e_descr\n\n <$oracle_original>" <<oracle_module>> as e_alias
+!define OracleModule(e_alias, e_label, e_ci) rectangle "==e_label\n\n e_ci\n\n <$oracle_original>" <<oracle_module>> as e_alias
 
