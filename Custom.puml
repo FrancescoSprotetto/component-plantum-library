@@ -25,7 +25,7 @@ skinparam rectangle<<oracle_module>> {
     BorderColor #710000
 }
 
-!define OracleModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$oracle_original>" <<oracle_module>> as e_alias
+!define OracleModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n ---e_ci---\n\n <$oracle_original>" <<oracle_module>> as e_alias
 
 
 ' ###################################
