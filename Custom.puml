@@ -6,6 +6,7 @@
 
 !define ELEMENT_FONT_COLOR #FFFFFF
 !define ORACLE_BK_COLOR #710000
+!define VUEJS_BK_COLOR #41b883
 
 ' Styling
 ' ##################################
@@ -40,3 +41,17 @@ skinparam database<<oracle_db>> {
 }
 
 !define OracleDb(e_alias, e_label, e_ci) database "==<<e_label>>\n\n //<size:TECHN_FONT_SIZE>[e_techn]</size>// e_ci\n\n <$oracle_original>" <<oracle_db>> as e_alias
+
+
+' ###################################
+' VUEJS
+' ###################################
+
+skinparam rectangle<<vuejs_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor VUEJS_BK_COLOR
+    BorderColor VUEJS_BK_COLOR
+}
+
+!define VueJSModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n ---e_ci---\n\n <$vuejs_wordmark>" <<vuejs_module>> as e_alias
