@@ -1,12 +1,14 @@
 !define IMPORT https://raw.githubusercontent.com/FrancescoSprotetto/component-plantum-library/main
 !includeurl IMPORT/Import.puml
+!include images/azure.puml
 
 ' Colors
 ' ##################################
 
 !define ELEMENT_FONT_COLOR #FFFFFF
 !define ORACLE_BK_COLOR #710000
-!define VUEJS_BK_COLOR #41b883
+!define VUEJS_BK_COLOR #41B883
+!define AZURE_BK_COLOR #008AD7
 
 ' Styling
 ' ##################################
@@ -22,8 +24,8 @@ skinparam defaultTextAlignment center
 skinparam rectangle<<oracle_module>> {
     StereotypeFontColor ELEMENT_FONT_COLOR
     FontColor ELEMENT_FONT_COLOR
-    BackgroundColor #710000
-    BorderColor #710000
+    BackgroundColor ORACLE_BK_COLOR
+    BorderColor ORACLE_BK_COLOR
 }
 
 !define OracleModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$oracle_original>" <<oracle_module>> as e_alias
@@ -36,7 +38,7 @@ skinparam rectangle<<oracle_module>> {
 skinparam database<<oracle_db>> {
     StereotypeFontColor ELEMENT_FONT_COLOR
     FontColor ELEMENT_FONT_COLOR
-    BackgroundColor #710000
+    BackgroundColor ORACLE_BK_COLOR
     BorderColor ELEMENT_FONT_COLOR
 }
 
@@ -55,3 +57,16 @@ skinparam rectangle<<vuejs_module>> {
 }
 
 !define VueJSModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$vuejs_wordmark>" <<vuejs_module>> as e_alias
+
+' ###################################
+' AZURE
+' ###################################
+
+skinparam rectangle<<azure_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor AZURE_BK_COLOR
+    BorderColor AZURE_BK_COLOR
+}
+
+!define AzureModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$azure>" <<azure_module>> as e_alias
