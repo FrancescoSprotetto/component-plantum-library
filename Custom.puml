@@ -9,6 +9,7 @@
 !include images/jms.puml
 !include images/kaleyra.puml
 !include images/lc.puml
+!include images/lightstream.puml
 
 ' Colors
 ' ##################################
@@ -25,6 +26,7 @@
 !define JMS_BK_COLOR #E10000
 !define KALEYRA_BK_COLOR #D81D3A
 !define LC_BK_COLOR #1D87C3
+!define LIGHTSTREAM_BK_COLOR #26AD80
 
 ' Styling
 ' ##################################
@@ -190,3 +192,16 @@ skinparam rectangle<<lc_module>> {
 }
 
 !define LcModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$lc>" <<lc_module>> as e_alias
+
+' ###################################
+' LIGHTSTREAM
+' ###################################
+
+skinparam rectangle<<lightstream_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor LIGHTSTREAM_BK_COLOR
+    BorderColor LIGHTSTREAM_BK_COLOR
+}
+
+!define LightstreamModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$lightstream>" <<lightstream_module>> as e_alias
