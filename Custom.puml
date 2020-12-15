@@ -4,6 +4,7 @@
 !include images/qarc.puml
 !include images/tomcat.puml
 !include images/sybase.puml
+!include images/gemalto.puml
 
 ' Colors
 ' ##################################
@@ -15,6 +16,7 @@
 !define QARC_BK_COLOR #FE7D19
 !define TOMCAT_BK_COLOR #FFDC76
 !define SYBASE_BK_COLOR #007DB8
+!define GEMALTO_BK_COLOR #ED7E1F
 
 ' Styling
 ' ##################################
@@ -115,3 +117,16 @@ skinparam database<<sybase_db>> {
 }
 
 !define SybaseDb(e_alias, e_label, e_ci) database "==<<e_label>>\n\n e_ci\n\n <$sybase>" <<sybase_db>> as e_alias
+
+' ###################################
+' GEMALTO
+' ###################################
+
+skinparam rectangle<<gemalto_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor GEMALTO_BK_COLOR
+    BorderColor GEMALTO_BK_COLOR
+}
+
+!define GemaltoModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$gemalto>" <<gemalto_module>> as e_alias
