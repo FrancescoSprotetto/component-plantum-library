@@ -7,6 +7,8 @@
 !include images/gemalto.puml
 !include images/filenet.puml
 !include images/jms.puml
+!include images/kaleyra.puml
+!include images/lc.puml
 
 ' Colors
 ' ##################################
@@ -21,6 +23,8 @@
 !define GEMALTO_BK_COLOR #ED7E1F
 !define FILENET_BK_COLOR #006290
 !define JMS_BK_COLOR #E10000
+!define KALEYRA_BK_COLOR #D81D3A
+!define LC_BK_COLOR #1D87C3
 
 ' Styling
 ' ##################################
@@ -152,11 +156,37 @@ skinparam rectangle<<filenet_module>> {
 ' JMS
 ' ###################################
 
-skinparam queue<<filenet_module>> {
+skinparam queue<<jms_queue>> {
     StereotypeFontColor ELEMENT_FONT_COLOR
     FontColor ELEMENT_FONT_COLOR
     BackgroundColor JMS_BK_COLOR
     BorderColor JMS_BK_COLOR
 }
 
-!define JmsQueue(e_alias, e_label, e_ci) queue "==<<e_label>>\n\n e_ci\n\n <$jms>" <<filenet_module>> as e_alias
+!define JmsQueue(e_alias, e_label, e_ci) queue "==<<e_label>>\n\n e_ci\n\n <$jms>" <<jms_queue>> as e_alias
+
+' ###################################
+' KALEYRA
+' ###################################
+
+skinparam rectangle<<kaleyra_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor KALEYRA_BK_COLOR
+    BorderColor KALEYRA_BK_COLOR
+}
+
+!define KaleyraModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$kaleyra>" <<kaleyra_module>> as e_alias
+
+' ###################################
+' LC
+' ###################################
+
+skinparam rectangle<<lc_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor LC_BK_COLOR
+    BorderColor LC_BK_COLOR
+}
+
+!define LcModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$lc>" <<lc_module>> as e_alias
