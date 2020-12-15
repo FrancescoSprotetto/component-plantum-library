@@ -1,6 +1,7 @@
 !define IMPORT https://raw.githubusercontent.com/FrancescoSprotetto/component-plantum-library/main
 !includeurl IMPORT/Import.puml
 !include images/azure.puml
+!include images/qarc.puml
 
 ' Colors
 ' ##################################
@@ -9,6 +10,7 @@
 !define ORACLE_BK_COLOR #710000
 !define VUEJS_BK_COLOR #41B883
 !define AZURE_BK_COLOR #008AD7
+!define QARC_BK_COLOR #FE7D19
 
 ' Styling
 ' ##################################
@@ -70,3 +72,16 @@ skinparam rectangle<<azure_module>> {
 }
 
 !define AzureModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$azure>" <<azure_module>> as e_alias
+
+' ###################################
+' QARC
+' ###################################
+
+skinparam rectangle<<qarc_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor QARC_BK_COLOR
+    BorderColor QARC_BK_COLOR
+}
+
+!define QarcModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$qarc>" <<qarc_module>> as e_alias
