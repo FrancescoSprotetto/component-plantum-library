@@ -6,6 +6,7 @@
 !include images/sybase.puml
 !include images/gemalto.puml
 !include images/filenet.puml
+!include images/jms.puml
 
 ' Colors
 ' ##################################
@@ -19,6 +20,7 @@
 !define SYBASE_BK_COLOR #007DB8
 !define GEMALTO_BK_COLOR #ED7E1F
 !define FILENET_BK_COLOR #006290
+!define JMS_BK_COLOR #E10000
 
 ' Styling
 ' ##################################
@@ -145,3 +147,16 @@ skinparam rectangle<<filenet_module>> {
 }
 
 !define FilenetModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$filenet>" <<filenet_module>> as e_alias
+
+' ###################################
+' JMS
+' ###################################
+
+skinparam queue<<filenet_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor JMS_BK_COLOR
+    BorderColor JMS_BK_COLOR
+}
+
+!define JmsQueue(e_alias, e_label, e_ci) queue "==<<e_label>>\n\n e_ci\n\n <$jms>" <<filenet_module>> as e_alias
