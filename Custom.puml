@@ -2,6 +2,7 @@
 !includeurl IMPORT/Import.puml
 !include images/azure.puml
 !include images/qarc.puml
+!include images/tomcat.puml
 
 ' Colors
 ' ##################################
@@ -11,6 +12,7 @@
 !define VUEJS_BK_COLOR #41B883
 !define AZURE_BK_COLOR #008AD7
 !define QARC_BK_COLOR #FE7D19
+!define TOMCAT_BK_COLOR #FFDC76
 
 ' Styling
 ' ##################################
@@ -85,3 +87,16 @@ skinparam rectangle<<qarc_module>> {
 }
 
 !define QarcModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$qarc>" <<qarc_module>> as e_alias
+
+' ###################################
+' TOMCAT
+' ###################################
+
+skinparam rectangle<<tomcat_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor TOMCAT_BK_COLOR
+    BorderColor TOMCAT_BK_COLOR
+}
+
+!define TomcatModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$tomcat>" <<tomcat_module>> as e_alias
