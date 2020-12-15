@@ -3,7 +3,7 @@
 !include images/azure.puml
 !include images/qarc.puml
 !include images/tomcat.puml
-!include images/sap.puml
+!include images/sybase.puml
 
 ' Colors
 ' ##################################
@@ -14,7 +14,7 @@
 !define AZURE_BK_COLOR #008AD7
 !define QARC_BK_COLOR #FE7D19
 !define TOMCAT_BK_COLOR #FFDC76
-!define SAP_BK_COLOR #007DB8
+!define SYBASE_BK_COLOR #007DB8
 
 ' Styling
 ' ##################################
@@ -104,14 +104,14 @@ skinparam rectangle<<tomcat_module>> {
 !define TomcatModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$tomcat>" <<tomcat_module>> as e_alias
 
 ' ###################################
-' SAP
+' SYBASE
 ' ###################################
 
-skinparam database<<sap_db>> {
+skinparam database<<sybase_db>> {
     StereotypeFontColor ELEMENT_FONT_COLOR
     FontColor ELEMENT_FONT_COLOR
-    BackgroundColor SAP_BK_COLOR
-    BorderColor SAP_BK_COLOR
+    BackgroundColor SYBASE_BK_COLOR
+    BorderColor SYBASE_BK_COLOR
 }
 
-!define SapDb(e_alias, e_label, e_ci) database "==<<e_label>>\n\n e_ci\n\n <$sap>" <<sap_db>> as e_alias
+!define SybaseDb(e_alias, e_label, e_ci) database "==<<e_label>>\n\n e_ci\n\n <$sybase>" <<sybase_db>> as e_alias
