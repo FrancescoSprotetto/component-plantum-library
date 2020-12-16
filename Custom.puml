@@ -9,6 +9,7 @@
 !include images/jms.puml
 !include images/kaleyra.puml
 !include images/lc.puml
+!include images/android.puml
 !include images/lightstream.puml
 
 ' Colors
@@ -27,6 +28,7 @@
 !define KALEYRA_BK_COLOR #D81D3A
 !define LC_BK_COLOR #1D87C3
 !define LIGHTSTREAM_BK_COLOR #26AD80
+!define ANDROID_BK_COLOR #26AD80
 
 ' Styling
 ' ##################################
@@ -205,3 +207,16 @@ skinparam rectangle<<lightstream_module>> {
 }
 
 !define LightstreamModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$lightstream>" <<lightstream_module>> as e_alias
+
+' ###################################
+' ANDROID
+' ###################################
+
+skinparam rectangle<<android_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor ANDROID_BK_COLOR
+    BorderColor ANDROID_BK_COLOR
+}
+
+!define AndroidModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$android>" <<android_module>> as e_alias
