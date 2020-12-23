@@ -1,7 +1,7 @@
 !define IMPORT https://raw.githubusercontent.com/FrancescoSprotetto/component-plantum-library/main
 !includeurl IMPORT/Import.puml
 !include images/azure.puml
-!include images/qarc.puml
+!include images/nexus.puml
 !include images/tomcat.puml
 !include images/sybase.puml
 !include images/gemalto.puml
@@ -10,10 +10,14 @@
 !include images/kaleyra.puml
 !include images/lc.puml
 !include images/android.puml
-!include images/lightstream.puml
+!include images/lightstreamer.puml
 !include images/apple.puml
 !include images/j2ee.puml
 !include images/nas.puml
+!include images/microservices.puml
+!include images/cedacri.puml
+!include images/crafter.puml
+!include images/liferay.puml
 
 ' Colors
 ' ##################################
@@ -22,19 +26,23 @@
 !define ORACLE_BK_COLOR #710000
 !define VUEJS_BK_COLOR #41B883
 !define AZURE_BK_COLOR #008AD7
-!define QARC_BK_COLOR #FE7D19
-!define TOMCAT_BK_COLOR #FFDC76
+!define NEXUS_BK_COLOR #FE7D19
+!define TOMCAT_BK_COLOR #CA9F19
 !define SYBASE_BK_COLOR #007DB8
 !define GEMALTO_BK_COLOR #ED7E1F
 !define FILENET_BK_COLOR #006290
 !define JMS_BK_COLOR #E10000
 !define KALEYRA_BK_COLOR #D81D3A
 !define LC_BK_COLOR #1D87C3
-!define LIGHTSTREAM_BK_COLOR #26AD80
+!define LIGHTSTREAMER_BK_COLOR #26AD80
 !define ANDROID_BK_COLOR #3BD482
 !define APPLE_BK_COLOR #000000
-!define J2EE_BK_COLOR #E9852D
+!define J2EE_BK_COLOR #E42C2E
 !define NAS_BK_COLOR #98CCFD
+!define MICROSERVICES_BK_COLOR #8CC64F
+!define CEDACRI_BK_COLOR #003577
+!define CRAFTER_BK_COLOR #FF0000
+!define LIFERAY_BK_COLOR #1B396B
 
 ' Styling
 ' ##################################
@@ -98,17 +106,17 @@ skinparam rectangle<<azure_module>> {
 !define AzureModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$azure>" <<azure_module>> as e_alias
 
 ' ###################################
-' QARC
+' NEXUS
 ' ###################################
 
-skinparam rectangle<<qarc_module>> {
+skinparam rectangle<<nexus_module>> {
     StereotypeFontColor ELEMENT_FONT_COLOR
     FontColor ELEMENT_FONT_COLOR
-    BackgroundColor QARC_BK_COLOR
-    BorderColor QARC_BK_COLOR
+    BackgroundColor NEXUS_BK_COLOR
+    BorderColor NEXUS_BK_COLOR
 }
 
-!define QarcModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$qarc>" <<qarc_module>> as e_alias
+!define NexusModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$nexus>" <<nexus_module>> as e_alias
 
 ' ###################################
 ' TOMCAT
@@ -205,14 +213,14 @@ skinparam rectangle<<lc_module>> {
 ' LIGHTSTREAM
 ' ###################################
 
-skinparam rectangle<<lightstream_module>> {
+skinparam rectangle<<lightstreamer_module>> {
     StereotypeFontColor ELEMENT_FONT_COLOR
     FontColor ELEMENT_FONT_COLOR
-    BackgroundColor LIGHTSTREAM_BK_COLOR
-    BorderColor LIGHTSTREAM_BK_COLOR
+    BackgroundColor LIGHTSTREAMER_BK_COLOR
+    BorderColor LIGHTSTREAMER_BK_COLOR
 }
 
-!define LightstreamModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$lightstream>" <<lightstream_module>> as e_alias
+!define LightstreamerModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$lightstreamer>" <<lightstreamer_module>> as e_alias
 
 ' ###################################
 ' ANDROID
@@ -265,3 +273,55 @@ skinparam rectangle<<nas_module>> {
 }
 
 !define NasModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$nas>" <<nas_module>> as e_alias
+
+' ###################################
+' MICROSERVICES
+' ###################################
+
+skinparam rectangle<<microservices_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor MICROSERVICES_BK_COLOR
+    BorderColor MICROSERVICES_BK_COLOR
+}
+
+!define MicroservicesModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$microservices>" <<microservices_module>> as e_alias
+
+' ###################################
+' CEDACRI
+' ###################################
+
+skinparam rectangle<<cedacri_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor CEDACRI_BK_COLOR
+    BorderColor CEDACRI_BK_COLOR
+}
+
+!define CedacriModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$cedacri>" <<cedacri_module>> as e_alias
+
+' ###################################
+' CRAFTER
+' ###################################
+
+skinparam rectangle<<crafter_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor CRAFTER_BK_COLOR
+    BorderColor CRAFTER_BK_COLOR
+}
+
+!define CrafterModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$crafter>" <<crafter_module>> as e_alias
+
+' ###################################
+' LIFERAY
+' ###################################
+
+skinparam rectangle<<liferay_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor LIFERAY_BK_COLOR
+    BorderColor LIFERAY_BK_COLOR
+}
+
+!define LiferayModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$liferay>" <<liferay_module>> as e_alias
