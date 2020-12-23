@@ -12,6 +12,8 @@
 !include images/android.puml
 !include images/lightstream.puml
 !include images/apple.puml
+!include images/j2ee.puml
+!include images/nas.puml
 
 ' Colors
 ' ##################################
@@ -31,6 +33,8 @@
 !define LIGHTSTREAM_BK_COLOR #26AD80
 !define ANDROID_BK_COLOR #3BD482
 !define APPLE_BK_COLOR #000000
+!define J2EE_BK_COLOR #E9852D
+!define NAS_BK_COLOR #98CCFD
 
 ' Styling
 ' ##################################
@@ -235,3 +239,29 @@ skinparam rectangle<<apple_module>> {
 }
 
 !define AppleModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$apple>" <<apple_module>> as e_alias
+
+' ###################################
+' J2EE
+' ###################################
+
+skinparam rectangle<<j2ee_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor J2EE_BK_COLOR
+    BorderColor J2EE_BK_COLOR
+}
+
+!define J2eeModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$j2ee>" <<j2ee_module>> as e_alias
+
+' ###################################
+' NAS
+' ###################################
+
+skinparam rectangle<<nas_module>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor ELEMENT_FONT_COLOR
+    BackgroundColor NAS_BK_COLOR
+    BorderColor NAS_BK_COLOR
+}
+
+!define NasModule(e_alias, e_label, e_ci) rectangle "==<<e_label>>\n\n e_ci\n\n <$nas>" <<nas_module>> as e_alias
